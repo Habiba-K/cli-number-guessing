@@ -1,6 +1,6 @@
 {
   "name": "@habiba-khan/cli-number-guessing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is cli based number guessing game using typescript(inquirer)",
   "main": "main.js",
   "type": "module",
