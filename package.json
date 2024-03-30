@@ -2,7 +2,7 @@
   "name": "@habiba-khan/cli-number-guessing",
   "version": "1.0.0",
   "description": "This is cli based number guessing game using typescript(inquirer)",
-  "main": "index.js",
+  "main": "main.js",
   "type": "module",
   "publishConfig": {
     "access": "public"
