@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer"
 import chalkAnimation from 'chalk-animation';
 import chalk from "chalk";
@@ -18,8 +20,8 @@ async function welcome() {
 let neonTitle = chalkAnimation.neon(`\nWelcome to the Number Guessing Game!\n\n --------------------------`); // Animation starts
 await welcome();
 async function askQuestion(){
-    var randomNumber : number = Math.floor(Math.random() * 6 + 1)
-    console.log(randomNumber)
+    var randomNumber : number = Math.floor(Math.random() * 7 + 1)
+   // console.log(randomNumber)
     let usrInput : number;
     do {
         
@@ -29,7 +31,7 @@ async function askQuestion(){
                 
                 type: 'input',
                 name: 'userInput',
-                message: 'Guess a number between 1 - 7: ',
+                message: 'Guess a number (between 1 - 7): ',
                 validate: (value: string) => {
                     if (!isNaN(Number(value))) {
                         return true;
@@ -60,15 +62,13 @@ async function askQuestion(){
     }
     else 
     {
-        // let randomNumber : number = Math.floor(Math.random() * 6 + 1)
-        // console.log(randomNumber)
         if(randomNumber === usrInput)
         {
             chalkAnimation.rainbow(`\nCongratulations! You guessed correct number\n`); // Animation starts
             await welcome();
         }
         else{
-            chalkAnimation.pulse("Sorry! You guess wrong number\n");
+            chalkAnimation.pulse("\nSorry! You guessed incorrect number\n");
             await welcome();
         }
     }
